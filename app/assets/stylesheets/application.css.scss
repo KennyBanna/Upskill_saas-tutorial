@@ -28,7 +28,29 @@ h1, h2, h3 {
   background: linear-gradient(to left, #EDE574 , #E1F5C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.navbar { border: none; }
+.navbar {
+  border: none; 
+  
+}
+
+.navbar-default .navbar-brand {
+   color: black; 
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: black;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: black;
+  opacity: 0.6;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color: black;
+  opacity: 0.6;
+}
+
 
 .home-callout{
   margin-top: -20px;
