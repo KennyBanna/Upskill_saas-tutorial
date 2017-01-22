@@ -7,3 +7,10 @@ Memberships
 * Basic plan link should point to the regular devise sign up form
 
 * Pro plan link should point to custom sign up form
+
+
+ActiveRecord - Background library with functionality for making model files to talk to SQL database
+Parameters   - Query string parameters = passed through URL after ?mark
+             - POST data, sent through a POST request through HTML forms
+Substitution - Skill to mentally replace code with "what code does" 
+
