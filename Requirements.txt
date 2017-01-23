@@ -14,3 +14,12 @@ Parameters   - Query string parameters = passed through URL after ?mark
              - POST data, sent through a POST request through HTML forms
 Substitution - Skill to mentally replace code with "what code does" 
 
+Stripe integration
+* Modify user table to store card token from Stripe.
+* Make Javascript to prevent pro-form submitting, when user fills it out and
+send it off to Stripe so Stripe can return a card token.
+* Javascript should take card token and user fields (not card fields) and send 
+to rails app for validation. rails app should see whether plan is basic or pro.
+* Once validated, rails will send user info(email, plan_id) and card token to 
+Stripe server and Stripe will create a subscription and send back customer token.
+Rails should save user info and customer token to database.
