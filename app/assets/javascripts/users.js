@@ -2,7 +2,7 @@
 //Document ready.
 $(document).on('turbolinks:load', function(){
   var theForm = $('#pro_form');
-  var submitBtn = $('#form-submit-button');
+  var submitBtn = $('#form-signup-button');
   
   //Set stripe public key.
   Stripe.setPublishableKey( $('meta[name= "stripe-key"]').attr('content') );
@@ -42,9 +42,8 @@ $(document).on('turbolinks:load', function(){
     if (error) {
       //dont send to stripe 
       //Re-enable the button
-      submitBtn.val('Sign up').prop('disabled', false)
-    }
-    else{
+      submitBtn.val('Sign up').prop('disabled', false);
+    } else{
       //Send Card info to stripe
       Stripe.createToken({
       number: ccNum,
@@ -62,11 +61,12 @@ $(document).on('turbolinks:load', function(){
     var token = response.id;
   
     //inject token into form as hidden field
-    theForm.append($('<input-type="hidden" name="user[stripe_card_token]">').val(token) );
+    theForm.append($('<input type="hidden" name="user[stripe_card_token]">').val(token) );
   
     //Submit form to Rails app
     theForm.get(0).submit(); //0 because it's the first in an array
     
     return false;
   }
+  
 });
