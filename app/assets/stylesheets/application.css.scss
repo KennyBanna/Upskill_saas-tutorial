@@ -69,10 +69,19 @@ h1, h2, h3 {
   padding-bottom: 50px;
 }
 
+.flash-container{
+  position: absolute;
+  width: 100%;
+}
+
 .home-signup-links{
   margin-top: 30px;
 }
 
-.alert-notice{
-  display: none; 
+.alert-notice, .alert-alert{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.28);
+  margin-top: -12px; 
 }
+
