@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
       flash[:success] = 'Profile updated!' 
       redirect_to root_path
     else
-      flash[:warning] = 'Error'
+      flash[:warning] =  @profile.errors.full_messages.join(", ")
       render action :new
     end
   end 
