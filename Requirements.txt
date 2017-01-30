@@ -25,7 +25,7 @@ Stripe server and Stripe will create a subscription and send back customer token
 Rails should save user info and customer token to database.
 
 User Profiles
-* Each user should have a profile
+* Each user should have a profile 
 * The user should see a link to the new profile form upon signing up
 * The user should be able to create and view their user profile
 * The User should have a profile picture
