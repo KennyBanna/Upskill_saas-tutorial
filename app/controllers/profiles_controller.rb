@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
     #Render profile details form 
   end
   
-  #POST request ti user/:user_id/profile/new
+  #POST request to user/:user_id/profile/new
   def create
     #Ensure that we have the user currently filling out form
     @user = User.find( params[:user_id])
@@ -19,6 +19,13 @@ class ProfilesController < ApplicationController
       render action :new
     end
   end 
+  
+  #GET request to /users/:user_id/profile/edit
+  def edit 
+    #Get current user
+    @user = User.find( params[:user_id] )
+    @profile = @user.profile
+  end
   
   private
     def profile_params
