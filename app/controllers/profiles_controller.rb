@@ -42,7 +42,8 @@ class ProfilesController < ApplicationController
       #Redirect to users profile page
       redirect_to user_path(id: params[:user_id])
     else
-      render action :edit
+      flash[:danger] = @profile.errors.full_messages.join(", ")
+      render action: :edit
     end
   end
   
